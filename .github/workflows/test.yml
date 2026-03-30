@@ -1,8 +1,8 @@
 name: ci
 
-  on:
+on:
     push:
-      branches: [develop]
+      branches: [master]
 
     jobs:
        test: 
@@ -10,10 +10,10 @@ name: ci
 
         steps:
           -name: Checkout 
-           uses: actions/checkout@v6
-           -name:setup node.js
-            uses: actions/setup-node@v6
-            with:
-              node-version: 24
-              cache: 'npm'
+          uses: actions/checkout@v6
+          -name: setup node.js
+          uses: actions/setup-node@v6
+          with:
+               node-version: 24
+               cache: 'npm'
             
