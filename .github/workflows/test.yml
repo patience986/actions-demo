@@ -8,12 +8,12 @@ on:
        test: 
         runs-on: ubuntu-latest
 
-        steps:
-          -name: Checkout 
-          uses: actions/checkout@v6
-          -name: setup node.js
-          uses: actions/setup-node@v6
-          with:
-               node-version: 24
-               cache: 'npm'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
             
